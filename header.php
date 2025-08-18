@@ -16,12 +16,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><?php echo htmlspecialchars($pageTitle); ?></title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2Pkf6N5s8F8Hv2VQF5VbQZ1YUg1nTQ6Xo8XrYq+Q0tLdLu2vCw8KqYx4Yg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <?php if (!empty($pageStyles)) { echo "<style>\n" . $pageStyles . "\n</style>\n"; } ?>
 </head>
 <body>
   <header>
     <div>
-      <img src="assets/logo.png" alt="Ballot Buzz Logo" style="max-height: 80px;">
+      <img src="images/Logo.png" alt="Ballot Buzz Logo" style="max-height: 80px;">
     </div>
     <nav>
       <a href="home.php" class="<?php echo $activePage === 'home' ? 'active' : ''; ?>">Home</a>

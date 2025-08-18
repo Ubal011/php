@@ -1,7 +1,5 @@
 <?php
 ?>
-
-<link rel="stylesheet" type="text/css" href="footer.css">
 <footer class="bb-footer">
   <div class="bb-footer-container">
     <!-- Logo & About -->
@@ -47,3 +45,5 @@
     &copy; <?php echo date('Y'); ?> Ballot Buzz. All rights reserved.
   </div>
 </footer>
+</body>
+</html>

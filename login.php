@@ -11,19 +11,18 @@ body {
   background-size: cover; 
   background-position: center; 
   color: white; 
-  display: flex; 
-  height: 100vh; 
-  align-items: center; 
-  justify-content: center; 
+  min-height: 100vh; 
+  display: block; 
+  padding: 4rem 1rem; 
 }
 .container { 
   background-color: rgba(26, 26, 46, 0.95); 
   padding: 2rem; 
   border-radius: 1rem; 
   box-shadow: 0 0 20px rgba(0,0,0,0.5); 
-  width: 350px; 
-  margin-left: auto; 
-  margin-right: 20vw; 
+  width: 100%; 
+  max-width: 380px; 
+  margin: 0 auto; 
 }
 h1 { 
   text-align: center; 
@@ -60,6 +59,23 @@ button {
 .signup-link a { 
   color: #00bfff; 
   text-decoration: none; 
+}
+.error { 
+  color: #f44336; 
+  font-weight: bold; 
+  margin-top: 1rem; 
+  text-align: center; 
+}
+.signup-link { 
+  margin-top: 1rem; 
+  text-align: center; 
+}
+.signup-link a { 
+  color: #00bfff; 
+  text-decoration: none; 
+}
+@media (max-width: 480px) {
+  body { padding: 2rem 1rem; }
 }
 CSS;
 

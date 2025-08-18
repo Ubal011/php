@@ -10,17 +10,18 @@ body {
     background-size: cover;
     background-position: center;
     color: white;
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
+    min-height: 100vh;
+    display: block;
+    padding: 4rem 1rem;
 }
 .container {
     background-color: rgba(26, 26, 46, 0.95);
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    width: 350px;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
 }
 h1 {
     text-align: center;
@@ -48,6 +49,9 @@ button {
     margin-bottom: 1rem;
     font-weight: bold;
     text-align: center;
+}
+@media (max-width: 480px) {
+  body { padding: 2rem 1rem; }
 }
 CSS;
 

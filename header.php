@@ -30,6 +30,26 @@
       <a href="report.php" class="<?php echo $activePage === 'report' ? 'active' : ''; ?>">Report Issue</a>
       <a href="guides.php" class="<?php echo $activePage === 'guides' ? 'active' : ''; ?>">Guides</a>
       <a href="candidates.php" class="<?php echo $activePage === 'candidates' ? 'active' : ''; ?>">Candidates</a>
-      <a href="login.php" class="<?php echo $activePage === 'login' ? 'active' : ''; ?>">Log Out</a>
+      <a id="auth-link" href="login.php" class="<?php echo $activePage === 'login' ? 'active' : ''; ?>">Log In</a>
     </nav>
   </header>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var authLink = document.getElementById('auth-link');
+    if (!authLink) return;
+    var currentUser = localStorage.getItem('current_user');
+    if (currentUser) {
+      authLink.textContent = 'Log Out';
+      authLink.href = '#';
+      authLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        localStorage.removeItem('current_user');
+        alert('Logged out successfully');
+        window.location.href = 'login.php';
+      });
+    } else {
+      authLink.textContent = 'Log In';
+      authLink.href = 'login.php';
+    }
+  });
+  </script>

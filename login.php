@@ -120,6 +120,8 @@ loginBtn.addEventListener('click', () => {
     return; 
   }
   
+  // Set current user for nav to reflect logged-in state
+  localStorage.setItem('current_user', username);
   alert('Login successful! Redirecting...');
   window.location.href = 'home.php';
 });

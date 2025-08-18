@@ -26,6 +26,7 @@ main {
   display: flex; 
   gap: 1rem; 
   margin-bottom: 1rem; 
+  flex-wrap: wrap; 
 }
 .updates, .presentation, .alerts { 
   background-color: #cfd8e6; 
@@ -87,6 +88,7 @@ main {
   justify-content: center; 
   gap: 1rem; 
   margin-bottom: 2rem; 
+  flex-wrap: wrap; 
 }
 .button-row div { 
   background-color: #cfd8e6; 
@@ -101,34 +103,19 @@ main {
 .button-row div:hover { 
   background-color: #b3c4dd; 
 }
-footer { 
-  background-color: #b3c4dd; 
-  padding: 2rem 1rem; 
-  display: flex; 
-  justify-content: center; 
-  flex-wrap: wrap; 
-  gap: 2rem; 
-  margin-top: 2rem; 
-}
-.footer-left, .footer-right { 
-  display: flex; 
-  flex-direction: column; 
-  gap: 1rem; 
-  align-items: center; 
-}
-footer button { 
-  background-color: #0a2e5c; 
-  color: white; 
-  border: none; 
-  padding: 0.8rem 2rem; 
-  border-radius: 5px; 
-  cursor: pointer; 
-  width: 200px; 
+@media (max-width: 900px) {
+  .top-row { 
+    flex-direction: column; 
+  }
+  .button-row div {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 CSS;
 
 // Include the header
-include __DIR__ . '/includes/header.php';
+include __DIR__ . '/header.php';
 ?>
 
 <main>
@@ -165,4 +152,4 @@ include __DIR__ . '/includes/header.php';
   </div>
 </main>
 
-<?php include __DIR__ . '/includes/footer.php'; ?>
+<?php include __DIR__ . '/footer.php'; ?>

@@ -64,7 +64,7 @@ button {
 CSS;
 
 // Include the header
-include __DIR__ . '/includes/header.php';
+include __DIR__ . '/header.php';
 ?>
 
 <div class="container">
@@ -109,4 +109,4 @@ loginBtn.addEventListener('click', () => {
 });
 </script>
 
-<?php include __DIR__ . '/includes/footer.php'; ?>
+<?php include __DIR__ . '/footer.php'; ?>

@@ -1,10 +1,10 @@
 <?php
 // report.php - Issue Reporting Page
-define('ACTIVE_PAGE', 'report'); // Track active page for navigation highlighting
-$page_title = 'Ballot BUZZ - Report Issue';
+$activePage = 'report';
+$pageTitle = 'Ballot BUZZ - Report Issue';
 
 // Include common headers
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__ . '/header.php';
 ?>
 
 <!-- CSS specific to this page -->
@@ -130,6 +130,17 @@ textarea {
         min-width: auto;
     }
 }
+
+/* Buttons row */
+.buttons-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.buttons-row button {
+    flex: 1 1 180px;
+}
 </style>
 
 <main>
@@ -247,5 +258,5 @@ document.getElementById('photoBtn').addEventListener('click', function() {
 
 <?php
 // Include common footer
-require_once __DIR__ . '/includes/footer.php';
+require_once __DIR__ . '/footer.php';
 ?>

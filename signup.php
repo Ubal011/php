@@ -52,7 +52,7 @@ button {
 CSS;
 
 // Include header
-include __DIR__ . '/includes/header.php';
+include __DIR__ . '/header.php';
 ?>
 
 <div class="container">
@@ -118,4 +118,4 @@ form.addEventListener('submit', function(e) {
 });
 </script>
 
-<?php include __DIR__ . '/includes/footer.php'; ?>
+<?php include __DIR__ . '/footer.php'; ?>

@@ -20,7 +20,9 @@ nav a.active {
 }
 main { 
   flex: 1; 
-  padding: 1.5rem; 
+  padding: 2rem; 
+  max-width: 1200px; 
+  margin: 0 auto; 
 }
 .top-row { 
   display: flex; 

@@ -24,6 +24,8 @@ main {
     display: flex;
     padding: 2rem;
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Panel styling */

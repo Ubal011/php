@@ -10,6 +10,7 @@ require_once __DIR__ . '/header.php';
 <!-- CSS specific to this page -->
 <style>
 /* Main layout */
+* { box-sizing: border-box; }
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -24,8 +25,6 @@ main {
     display: flex;
     padding: 2rem;
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 /* Panel styling */
@@ -39,6 +38,10 @@ main {
     gap: 1.5rem;
     min-width: 320px;
 }
+.left-panel h2 {
+    margin: 0 0 1rem 0;
+    color: #012055;
+}
 
 .right-panel {
     flex: 1.2;
@@ -47,6 +50,10 @@ main {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+}
+.right-panel h2 {
+    color: #012055;
+    margin-bottom: 0.8rem;
 }
 
 /* Form elements */
@@ -67,6 +74,7 @@ main {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    user-select: none;
 }
 
 .tab.active {
@@ -78,6 +86,24 @@ main {
     display: flex;
     gap: 0.5rem;
     align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+label {
+    font-weight: bold;
+    color: #0a2e5c;
+}
+input[type="text"],
+select,
+input[type="time"] {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #999;
+    width: 100%;
 }
 
 textarea {
@@ -105,6 +131,7 @@ textarea {
     border-bottom: 1px solid #ddd;
     padding: 0.5rem 0;
 }
+.report-item:last-child { border-bottom: none; }
 
 /* Status indicators */
 .report-status {
@@ -139,9 +166,23 @@ textarea {
     gap: 1rem;
     flex-wrap: wrap;
     margin-top: 1rem;
+    justify-content: flex-start;
 }
 .buttons-row button {
     flex: 1 1 180px;
+}
+button {
+    background-color: #012055;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #0141b8;
 }
 </style>
 
@@ -194,16 +235,12 @@ textarea {
 
     <!-- Right Panel: Description and Actions -->
     <div class="right-panel">
-        <h2>Incident Details</h2>
+        <h2>Description</h2>
         <textarea id="description" placeholder="Describe the issue in detail... What happened? Who was involved? Any witnesses?" required></textarea>
         
         <div class="buttons-row">
-            <button type="button" id="photoBtn">
-                <i class="fas fa-camera"></i> Attach Photo
-            </button>
-            <button type="submit" id="sendBtn" class="primary">
-                Submit Report
-            </button>
+            <button type="button" id="photoBtn">Submit Photo</button>
+            <button type="button" id="sendBtn">Send</button>
         </div>
     </div>
 </main>
@@ -228,33 +265,12 @@ document.querySelectorAll('.tab').forEach(tab => {
 
 // Form Handling
 document.getElementById('sendBtn').addEventListener('click', async function() {
-    const formData = {
-        location: document.getElementById('location').value,
-        time: document.getElementById('time').value,
-        ampm: document.getElementById('ampm').value,
-        issueType: document.getElementById('issueType').value,
-        description: document.getElementById('description').value
-    };
-
-    try {
-        // Here you would typically send to server
-        console.log('Submitting:', formData);
-        
-        // Show success message
-        alert('Report submitted successfully! Reference #' + Math.floor(Math.random() * 10000));
-        
-        // Reset form
-        document.getElementById('reportForm').reset();
-        document.getElementById('description').value = '';
-    } catch (error) {
-        console.error('Error:', error);
-        alert('Failed to submit report. Please try again.');
-    }
+    alert('Report sent! (Functionality not implemented)');
 });
 
 // Photo Upload (placeholder)
 document.getElementById('photoBtn').addEventListener('click', function() {
-    alert('Photo upload feature will be added in the next version');
+    alert('Photo upload feature coming soon!');
 });
 </script>
 

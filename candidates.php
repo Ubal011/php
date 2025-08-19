@@ -98,7 +98,7 @@ h1 {
 }
 CSS;
 
-include __DIR__ . '/includes/header.php';
+include __DIR__ . '/header.php';
 ?>
 
 <main>
@@ -140,4 +140,4 @@ function filterCandidates() {
 }
 </script>
 
-<?php include __DIR__ . '/includes/footer.php'; ?>
+<?php include __DIR__ . '/footer.php'; ?>

@@ -11,17 +11,18 @@ body {
   background-size: cover; 
   background-position: center; 
   color: white; 
+  min-height: 100vh; 
   display: flex; 
-  height: 100vh; 
-  align-items: center; 
-  justify-content: center; 
+  flex-direction: column; 
+  padding: 4rem 1rem; 
 }
 .container { 
   background-color: rgba(26, 26, 46, 0.95); 
   padding: 2rem; 
   border-radius: 1rem; 
   box-shadow: 0 0 20px rgba(0,0,0,0.5); 
-  width: 350px; 
+  width: 100%; 
+  max-width: 380px; 
   margin-left: auto; 
   margin-right: 20vw; 
 }
@@ -61,10 +62,30 @@ button {
   color: #00bfff; 
   text-decoration: none; 
 }
+.error { 
+  color: #f44336; 
+  font-weight: bold; 
+  margin-top: 1rem; 
+  text-align: center; 
+}
+.signup-link { 
+  margin-top: 1rem; 
+  text-align: center; 
+}
+.signup-link a { 
+  color: #00bfff; 
+  text-decoration: none; 
+}
+@media (max-width: 480px) {
+  body { padding: 2rem 1rem; }
+  .container { margin: 0 auto; }
+}
+/* Ensure footer sits at the bottom on this page */
+.bb-footer { margin-top: auto; }
 CSS;
 
 // Include the header
-include __DIR__ . '/includes/header.php';
+include __DIR__ . '/header.php';
 ?>
 
 <div class="container">
@@ -104,9 +125,11 @@ loginBtn.addEventListener('click', () => {
     return; 
   }
   
+  // Set current user for nav to reflect logged-in state
+  localStorage.setItem('current_user', username);
   alert('Login successful! Redirecting...');
   window.location.href = 'home.php';
 });
 </script>
 
-<?php include __DIR__ . '/includes/footer.php'; ?>
+<?php include __DIR__ . '/footer.php'; ?>

@@ -84,14 +84,7 @@ audio {
   margin-top: 1rem; 
   border-radius: 5px; 
 }
-footer { 
-  background-color: #b3c4dd; 
-  padding: 1rem 2rem; 
-  text-align: center; 
-  font-size: 0.9rem; 
-  color: #0a2e5c; 
-  margin-top: auto; 
-}
+ 
 @media (max-width: 900px) { 
   .columns { 
     flex-direction: column; 
@@ -103,7 +96,7 @@ footer {
 CSS;
 
 // Include the header
-include __DIR__ . '/includes/header.php';
+include __DIR__ . '/header.php';
 ?>
 
 <main>
@@ -154,5 +147,5 @@ include __DIR__ . '/includes/header.php';
 
 <?php
 // Include the footer
-include __DIR__ . '/includes/footer.php';
+include __DIR__ . '/footer.php';
 ?>

@@ -80,6 +80,8 @@ button {
   body { padding: 2rem 1rem; }
   .container { margin: 0 auto; }
 }
+/* Ensure footer sits at the bottom on this page */
+.bb-footer { margin-top: auto; }
 CSS;
 
 // Include the header

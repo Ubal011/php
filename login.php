@@ -12,7 +12,8 @@ body {
   background-position: center; 
   color: white; 
   min-height: 100vh; 
-  display: block; 
+  display: flex; 
+  flex-direction: column; 
   padding: 4rem 1rem; 
 }
 .container { 
@@ -22,7 +23,8 @@ body {
   box-shadow: 0 0 20px rgba(0,0,0,0.5); 
   width: 100%; 
   max-width: 380px; 
-  margin: 0 auto; 
+  margin-left: auto; 
+  margin-right: 20vw; 
 }
 h1 { 
   text-align: center; 
@@ -76,6 +78,7 @@ button {
 }
 @media (max-width: 480px) {
   body { padding: 2rem 1rem; }
+  .container { margin: 0 auto; }
 }
 CSS;
 
